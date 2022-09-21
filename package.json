@@ -1,0 +1,47 @@
+{
+  "name": "erp-root",
+  "private": true,
+  "scripts": {
+    "del": "rimraf node_modules",
+    "prepare": "husky install",
+    "dev:client": "pnpm dev --filter erp-client",
+    "dev:admin": "pnpm dev --filter erp-client",
+    "link:cli": "pnpm --filter @zfz/erp-cli exec npm link",
+    "unlink:cli": "pnpm --filter @zfz/erp-cli exec npm unlink @zfz/erp-cli -g",
+    "erp": "erp",
+    "preinstall": "npx only-allow pnpm",
+    "dev": "turbo run dev --parallel && pnpm dev --filter erp-client",
+    "build:client": "pnpm --filter=erp-client build"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.0.2",
+    "commitlint": "^17.0.2",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
+    "lerna": "^5.1.0",
+    "lint-staged": "^13.0.0",
+    "prettier": "^2.5.0",
+    "pretty-quick": "^3.1.3",
+    "turbo": "1.4.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "packageManager": "pnpm@7.12.1",
+  "engines": {
+    "node": ">=14",
+    "pnpm": ">=6.20.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "dayjs": "^1.11.5"
+  }
+}

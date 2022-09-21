@@ -1,0 +1,89 @@
+{
+  "name": "@zfz/formily-antd",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "dev": "npm run build:cjs && npm run build:esm",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --project tsconfig.build.json",
+    "build:esm": "tsc --project tsconfig.build.json --module es2015 --outDir esm"
+  },
+  "dependencies": {
+    "@ant-design/icons": "4.7.0",
+    "@formily/antd": "2.2.4",
+    "@formily/core": "2.2.4",
+    "@formily/grid": "2.2.4",
+    "@formily/json-schema": "2.2.4",
+    "@formily/react": "2.2.4",
+    "@formily/reactive": "2.2.4",
+    "@formily/reactive-react": "2.2.4",
+    "@formily/shared": "2.2.4",
+    "antd": "4.23.1",
+    "classnames": "2.2.6",
+    "loadsh": "^0.0.4",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@react-querybuilder/antd": "^4.5.2",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@types/react": "^17.0.0",
+    "cssnano": "^5.1.13",
+    "dayjs": "^1.11.5",
+    "less": "^4.1.3",
+    "postcss": "^8.4.16",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^7.8.0",
+    "react-querybuilder": "^4.5.2",
+    "rollup": "^2.75.5",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-external-globals": "0.6.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "tslib": "^2.4.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.2"
+  },
+  "peerDependencies": {
+    "@ant-design/icons": "4.x",
+    "@types/react": ">=16.8.0",
+    "@types/react-dom": ">=16.8.0",
+    "antd": "4.x",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "react-is": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
+  "description": "> TODO: description",
+  "author": "panghaoyuan <panghaoyuan@zhifuzi.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib",
+  "module": "esm",
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "sideEffects": [
+    "dist/*",
+    "esm/*.js",
+    "lib/*.js",
+    "src/*.ts",
+    "*.less",
+    "**/*/style.js"
+  ],
+  "engines": {
+    "npm": ">=3.0.0"
+  }
+}
